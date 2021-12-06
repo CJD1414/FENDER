@@ -4,9 +4,13 @@ import "./Navbar.css"
 
 function Navbar() {
   return (
-    <div className="navbar absolute_top">
-      <div className="nb_item-left"><LogoIcon/></div>
-      <h1 className="nb_item-left pd-l-10">ERBPS Fender</h1>
+    <div className="nb style absolute-top">
+      <div className="layout">
+        <h1 className="nb_item">ERBPS Fender</h1>
+        <div className="nb_item"><LogoIcon/></div>
+        <p>test</p>
+      </div>
+
     </div>
   )
 }
