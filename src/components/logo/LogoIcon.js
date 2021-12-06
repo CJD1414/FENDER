@@ -1,11 +1,11 @@
 import logo from "../../fender_logo.png"
-import "./Logo.css"
+import logos from"./Logo.module.css"
 
 function LogoIcon() {
   return (
     <img
-      src={logo}
-      className="logo-icon"
+    src={logo}
+    className={logos.icon}
       alt="Fender Logo Icon"
     />
   );

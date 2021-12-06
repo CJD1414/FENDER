@@ -1,16 +1,11 @@
-import LogoIcon from "../logo/LogoIcon";
-import "../../App.css"
-import "./Navbar.css"
-
+import LogoIcon from "../Logo/LogoIcon";
+import nb from "./Navbar.module.css"
+import classNames from "classnames";
 function Navbar() {
   return (
-    <div className="nb style absolute-top">
-      <div className="layout">
-        <h1 className="nb_item">ERBPS Fender</h1>
-        <div className="nb_item"><LogoIcon/></div>
-        <p>test</p>
-      </div>
-
+    <div className={classNames(nb.style, nb.main, nb.absolute_top)}>
+      <div className={nb.item_icon}><LogoIcon/></div>
+      <h1 className={nb.item}>ERBPS</h1>
     </div>
   )
 }

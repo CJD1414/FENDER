@@ -1,3 +1,5 @@
+import dd from "./Dropdown.module.css"
+
 function Dropdown(props){
   const options = [];
   for(const key in props.options){
@@ -8,7 +10,7 @@ function Dropdown(props){
     }
     options.push(option);
   }
-  return <div>
+  return <div className={dd.main}>
       <label>{props.header}: </label>
       <select>
           {options.map(
