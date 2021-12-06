@@ -1,27 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
-import Logo from "./components/logo/Logo"
 import Navbar from "./components/navbar/Navbar"
+import Dropdown from './components/dropdown/Dropdown';
+import Button from "./components/button/Button"
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <Navbar/>
-      <Logo/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app-ct-l">
+        <Dropdown header="Initial Destination" options={
+          {
+            "ERB335A": 
+            {
+              "text" : "ERB 335A"
+            },
+            "ERB335B": 
+            {
+              "text" : "ERB 335B"
+            },
+          }
+        }/>
+        <Dropdown header="Final Destination" options={
+          {
+            "ERB335A": 
+            {
+              "text" : "ERB 335A"
+            },
+            "ERB335B": 
+            {
+              "text" : "ERB 335B"
+            },
+          }
+        }/>
+        <Button label="Queue"/>
+      </div>
+    
+      <div className="app-ct-r app-ct-style">
+        <Button label="Queue"/>
+      </div>
+
     </div>
   );
 }

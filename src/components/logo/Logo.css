@@ -1,8 +1,8 @@
-.logo_main{
-    width: 400px;
-    height: 400px;
+.logo-main{
+  padding-top: 1in;
+  width: 20%;
 }
 
-.theme_navbar{
-    background-color: cornflowerblue;
+.logo-icon{
+  height: 100%;
 }
