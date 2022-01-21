@@ -1,4 +1,4 @@
-import ResponsiveAppBar from "../../appbar/ResponsiveAppBar";
+import ResponsiveAppBar from "../../Appbar/ResponsiveAppBar.js";
 function Home() {
   return (<>
     <ResponsiveAppBar />

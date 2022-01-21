@@ -1,5 +1,5 @@
 import logo from "../../fender_logo.png"
-import logos from"./Logo.module.css"
+
 
 const logoStyle = {
   height: "50px"
