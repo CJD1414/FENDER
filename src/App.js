@@ -1,13 +1,17 @@
 import './App.css';
-import Navbar from "./components/navbar/Navbar"
+import { Routes, Route, Link } from "react-router-dom";
 import Dropdown from './components/dropdown/Dropdown';
-import Button from "./components/button/Button"
+import Button from "./components/button/Button";
+import Home from './components/pages/home/Home';
+
 
 function App() {
   return (
     <div className="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <Navbar/>
       <div className="app-ct-l">
         <Dropdown header="Initial Destination" options={
           {
