@@ -46,7 +46,7 @@ const ResponsiveAppBar = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ flexGrow: 0, position: 'fixed', right: 10}}>
+          <Box sx={{ flexGrow: 0, position: 'absolute', top: 15,right: 10}}>
             <Button color="inherit">Login</Button>
           </Box>
         </Toolbar>

@@ -1,11 +1,10 @@
 import {
-  Link,
   Outlet
 } from "react-router-dom";
 
 import ResponsiveAppBar from "./components/Appbar/ResponsiveAppBar";
 import AutoBox from "./components/ComboBox/AutoBox";
-import { Button, Box, Container, Stack, Typography } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import BottomNavigationBar from "./components/BottomNavigation/BottomNavigation"
 
 export default function App() {
