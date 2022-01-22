@@ -7,9 +7,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
 import Logo from '../Logo/Logo.js';
-import { 
-  Link 
-} from 'react-router-dom'
 
 const pages = { 'Home' : '', 'Queue' : 'queue'};
 
@@ -39,7 +36,7 @@ const ResponsiveAppBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
            <Typography
-              variant="h6"
+              variant="h3"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}

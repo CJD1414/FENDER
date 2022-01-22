@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 
-export default function Queue(){
+export default function Info(){
   return (
     <Container sx={ { flexGrow: 1, margin:0}}>
         <Typography
@@ -8,7 +8,7 @@ export default function Queue(){
           noWrap
           component="div"
         >
-          Queue
+          Info
         </Typography>
     </Container>
   );

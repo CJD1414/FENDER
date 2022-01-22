@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { 
+import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 
 import App from './App';
-import Admin from './routes/admin';
-import Queue from './routes/queue';
+import Home from './routes/Home';
+import Admin from './routes/Admin';
+import Info from './routes/Info';
+import Queue from './routes/Queue';
 
 import '@fontsource/roboto/500.css';
 
@@ -19,10 +22,17 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}>
+      <Route path="/" element={<Navigate to="/app/home" />}/>
+      <Route path="app" element={<App />}>
+        <Route path="home" element={<Home />} />
         <Route path="admin" element={<Admin />} />
+        <Route path="info" element={<Info />} />
         <Route path="queue" element={<Queue />} />
       </Route>
+      <Route
+          path="*"
+          element={<Navigate to="/app/home" />}
+        />
     </Routes>
   </BrowserRouter>,
   rootElement

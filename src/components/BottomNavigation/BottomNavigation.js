@@ -21,9 +21,9 @@ export default function BottomNavigationBar() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Queue" icon={<RestoreIcon />} component={Link} to="/queue"/>
-        <BottomNavigationAction label="Home" icon={<House />} component={Link} to="/"/>
-        <BottomNavigationAction label="Info" icon={<InfoIcon />} component={Link} to="/info"/>
+        <BottomNavigationAction label="Queue" icon={<RestoreIcon />} component={Link} to="/app/queue"/>
+        <BottomNavigationAction label="Home" icon={<House />} component={Link} to="/app/home"/>
+        <BottomNavigationAction label="Info" icon={<InfoIcon />} component={Link} to="/app/info"/>
       </BottomNavigation>
     </Paper>
   );
