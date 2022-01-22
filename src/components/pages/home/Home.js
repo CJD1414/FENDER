@@ -1,9 +1,24 @@
 import ResponsiveAppBar from "../../Appbar/ResponsiveAppBar.js";
+import { Box, Container, Typography } from '@mui/material';
+
 function Home() {
   return (<>
     <ResponsiveAppBar />
-    <h2>Welcome to the homepage!</h2>
-    <p>You can do this, I believe in you.</p>
+    <main>
+      <Container fixed="xl">
+        <Typography
+          variant="h4"
+          noWrap
+          component="div"
+          sx={{ mr: 2, display: { xs: 'flex', md: 'flex' } }}
+        >
+        Request Services
+        </Typography>
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
+
+        </Box>
+      </Container>
+    </main>
   </>);
 }
 

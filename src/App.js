@@ -1,6 +1,12 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import {
+  Link,
+  Outlet
+} from "react-router-dom";
+
 import Home from './components/pages/Home/Home.js';
+import BottomNavigationBar from "./components/BottomNavigation/BottomNavigation.js"
+
 /*
 options={
           {
@@ -15,16 +21,20 @@ options={
           }
 */
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </div>
+  <div>
+    <Home />
+    <nav
+      style={{
+        borderBottom: "solid 1px",
+        paddingBottom: "1rem"
+      }}
+    >
+    </nav>
+    <Outlet />
+    <BottomNavigationBar />
+  </div>
 
   )
 }
-
-export default App;
