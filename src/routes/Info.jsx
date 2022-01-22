@@ -29,7 +29,7 @@ export default function Info() {
           </Typography>
           <Container>
             <Typography variant="p" noWrap component="div">
-              <p>Current job ID: <span id="current_job_id">offline</span></p>
+              <p>Current job: <span id="current_job_id">-1</span></p>
               <p>Total number of jobs: <span id="num_jobs">ERB 335A</span></p>
             </Typography>
           </Container>

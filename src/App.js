@@ -4,7 +4,7 @@ import {
 
 import ResponsiveAppBar from "./components/Appbar/ResponsiveAppBar";
 import AutoBox from "./components/ComboBox/AutoBox";
-import { Button, Container, Stack, Typography } from '@mui/material';
+import { Button, Box, Container, Stack, Typography } from '@mui/material';
 import BottomNavigationBar from "./components/BottomNavigation/BottomNavigation"
 
 export default function App() {
@@ -23,7 +23,10 @@ export default function App() {
           </Typography>
           <AutoBox name={"Departure"} />
           <AutoBox name={"Destination"} />
-          <Button variant="contained">Submit</Button>
+          <Box>
+            <Button variant="contained" sx={{ width: 300 }} >Submit</Button>
+          </Box>
+            
         </Stack>
       </Container>
       <nav

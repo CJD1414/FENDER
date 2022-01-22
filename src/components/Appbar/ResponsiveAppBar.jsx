@@ -28,7 +28,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container sx={{margin:"0"}}>
+      <Container sx={{width: '100%', margin:"0"}} maxWidth={false}>
         <Toolbar disableGutters>
           <Box>
             <Logo />
@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
               variant="h3"
               noWrap
               component="div"
-              sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}
+              sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex'} }}
               pl={1}
             >
             Fender
