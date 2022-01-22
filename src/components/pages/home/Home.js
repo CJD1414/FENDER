@@ -1,24 +1,27 @@
 import ResponsiveAppBar from "../../Appbar/ResponsiveAppBar.js";
-import { Box, Container, Typography } from '@mui/material';
+import AutoBox from "../../ComboBox/AutoBox.jsx";
+import { Button, Box, Container, Stack, Typography } from '@mui/material';
 
 function Home() {
   return (<>
     <ResponsiveAppBar />
-    <main>
-      <Container fixed="xl">
+
+    <Container
+      sx={ { flexGrow: 1, margin:0}}
+    >
+      <Stack spacing={2}>
         <Typography
           variant="h4"
           noWrap
           component="div"
-          sx={{ mr: 2, display: { xs: 'flex', md: 'flex' } }}
         >
-        Request Services
+          Request Services
         </Typography>
-        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
-
-        </Box>
-      </Container>
-    </main>
+        <AutoBox name={"Departure"}/>
+        <AutoBox name={"Destination"}/>
+        <Button variant="contained">Submit</Button>
+      </Stack>
+    </Container>
   </>);
 }
 

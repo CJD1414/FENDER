@@ -31,29 +31,25 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container sx={{margin:"0"}}>
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'flex', md: 'flex' } }}
-          >
+          <Box>
             <Logo />
-          </Typography>
+          </Box>
 
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 0 }}>
            <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}
+              pl={1}
             >
             Fender
             </Typography>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, position: 'fixed', right: 10}}>
             <Button color="inherit">Login</Button>
           </Box>
         </Toolbar>
