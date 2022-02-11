@@ -134,6 +134,7 @@ rooms = """
 """
 
 buf = io.StringIO(rooms)
-for room in buf:
-  clean = room.strip()
-  print("{ " + f"label: \"ERB {clean}\", code: \"ERB{clean}\"" + " },", sep="")
+for room_number in buf:
+  if room_number:
+    clean_number = room_number.strip()
+    print(f"\"ERB{clean_number}\" : {{\n\t" + f"\"label\": \"ERB {clean_number}\"" + "\n\t},", sep="")

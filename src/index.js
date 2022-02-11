@@ -9,32 +9,39 @@ import {
   Navigate
 } from "react-router-dom";
 
-import App from './App';
-import Home from './routes/Home';
+import App from './routes/App/App';
+import Home from './routes/App/Home';
 import Admin from './routes/Admin';
-import Info from './routes/Info';
-import Queue from './routes/Queue';
+import Info from './routes/App/Info';
+import Queue from './routes/Queue/Queue';
+
+import ResponsiveAppBar from './components/Appbar/ResponsiveAppBar';
+import BottomNavigationBar from './components/BottomNavigation/BottomNavigation';
 
 import '@fontsource/roboto/500.css';
 
 const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Navigate to="/app/home" />}/>
-      <Route path="app" element={<App />}>
-        <Route path="home" element={<Home />} />
-        <Route path="admin" element={<Admin />} />
-        <Route path="info" element={<Info />} />
+  <>
+    <ResponsiveAppBar />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/app/home" />}/>
+        <Route path="app" element={<App />}>
+          <Route path="home" element={<Home />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="info" element={<Info />} />
+        </Route>
         <Route path="queue" element={<Queue />} />
-      </Route>
-      <Route
-          path="*"
-          element={<Navigate to="/app/home" />}
-        />
-    </Routes>
-  </BrowserRouter>,
+        <Route
+            path="*"
+            element={<Navigate to="/app/home" />}
+          />
+      </Routes>
+    <BottomNavigationBar />
+    </BrowserRouter>
+  </>,
   rootElement
 );
 
