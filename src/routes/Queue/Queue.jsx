@@ -6,6 +6,8 @@ import Ticket from '../../components/Ticket/Ticket';
 import { tickets } from '../../models/tickets';
 import { locationsInfo } from '../../models/locations';
 
+import VerticalLinearStepper from "../../components/Stepper/VerticalLinearStepper";
+
 export default function Queue() {
 
   const [ticketSelection, setTicketSelection] = React.useState(null);
@@ -19,7 +21,9 @@ export default function Queue() {
       <Grid item xs={12} md={6}>
         <Paper elevation={8} style={{minHeight:500}}>
           <Paper square><Typography variant="h4" align="center">Ticket {ticketSelection}</Typography></Paper>
-          
+          <Container align="center" sx={{pt:5}}>
+            <VerticalLinearStepper />
+          </Container>
         </Paper>
       </Grid>
 
